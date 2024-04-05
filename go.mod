@@ -1,4 +1,4 @@
-module main.go
+module github.com/SombreShinobi/website
 
 go 1.22.1
 

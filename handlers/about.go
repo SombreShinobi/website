@@ -1,8 +1,8 @@
 package handlers
 
 import (
+	"github.com/SombreShinobi/website/views/about"
 	"github.com/labstack/echo/v4"
-	"main.go/views/about"
 )
 
 func HandleShowAbout(ctx echo.Context) error {

@@ -1,8 +1,8 @@
 package main
 
 import (
+	"github.com/SombreShinobi/website/handlers"
 	"github.com/labstack/echo/v4"
-	"main.go/handlers"
 )
 
 func main() {
