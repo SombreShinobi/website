@@ -1,0 +1,22 @@
+package home
+
+import "main.go/views/layout"
+
+templ Show(partial bool) {
+	@layout.Base(partial) {
+		<div>
+			<h1 class="max-6-xs text-8xl my-16 leading-[8rem]">
+				Yo, 
+				<br/>
+				I'm Sibin
+			</h1>
+			<p class="mt-8 text-lg">
+				Welcome.
+				<br/>
+				Feel free to look around.
+				<br/>
+				And have a great day.
+			</p>
+		</div>
+	}
+}
