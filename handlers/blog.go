@@ -5,9 +5,7 @@ import (
 	"main.go/views/blog"
 )
 
-type BlogHandler struct{}
-
-func (bHandler *BlogHandler) Show(ctx echo.Context) error {
+func HandleShowBlog(ctx echo.Context) error {
 	_, ok := ctx.Request().Header["Hx-Request"]
 	return render(ctx, blog.Show(ok))
 }

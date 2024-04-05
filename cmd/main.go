@@ -10,15 +10,10 @@ func main() {
 
 	e.Static("/dist", "dist")
 
-	homeHandler := handlers.HomeHandler{}
-	e.GET("/", homeHandler.Show)
-	e.GET("/home", homeHandler.Show)
-
-	blogHanlder := handlers.BlogHandler{}
-	e.GET("/blog", blogHanlder.Show)
-
-	aboutHanlder := handlers.AboutHanlder{}
-	e.GET("/about", aboutHanlder.Show)
+	e.GET("/", handlers.HandleShowHome)
+	e.GET("/home", handlers.HandleShowHome)
+	e.GET("/blog", handlers.HandleShowBlog)
+	e.GET("/about", handlers.HandleShowAbout)
 
 	e.Logger.Fatal(e.Start(":7331"))
 }

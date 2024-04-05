@@ -1,7 +1,10 @@
 package layout
 
-templ Base(hideBase bool) {
-	if hideBase {
+import "time"
+import "fmt"
+
+templ Base(partial bool) {
+	if partial {
 		{ children... }
 	} else {
 		<!DOCTYPE html>
@@ -14,7 +17,7 @@ templ Base(hideBase bool) {
 				<title></title>
 			</head>
 			<body
-				class="min-h-screen bg-gradient-to-br from-slate-800 to-slate-950 p-12 font-thin text-gray-50"
+				class="min-h-screen bg-gradient-to-br from-slate-800 to-slate-950 px-12 pt-12 font-thin text-gray-50"
 			>
 				<div
 					class="min-h-[calc(100vh-96px)] flex flex-col border-y border-gray-50"
@@ -58,6 +61,7 @@ templ Base(hideBase bool) {
 						</div>
 					</main>
 				</div>
+				<span class="text-right block w-full py-3">&copy; Sibin Sedlan { fmt.Sprint(time.Now().Year()) }</span>
 			</body>
 		</html>
 	}

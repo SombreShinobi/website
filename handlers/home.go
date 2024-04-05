@@ -5,9 +5,7 @@ import (
 	"main.go/views/home"
 )
 
-type HomeHandler struct{}
-
-func (hHandler *HomeHandler) Show(ctx echo.Context) error {
+func HandleShowHome(ctx echo.Context) error {
 	_, ok := ctx.Request().Header["Hx-Request"]
 	return render(ctx, home.Show(ok))
 }
