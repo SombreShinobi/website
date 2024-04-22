@@ -31,7 +31,7 @@ func Show(partial bool) templ.Component {
 				templ_7745c5c3_Buffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div><h1 class=\"max-6-xs text-8xl my-16 leading-[8rem]\">Yo, <br>I'm Sibin</h1><p class=\"mt-8 text-lg\">Welcome.<br>Feel free to look around.<br>And have a great day.</p></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div><h1 class=\"max-6-xs text-8xl my-16 leading-[8rem]\">Hi, <br>I'm Sibin</h1><p class=\"mt-8 text-lg\">Welcome.<br>Feel free to look around.<br>And have a great day.</p></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
